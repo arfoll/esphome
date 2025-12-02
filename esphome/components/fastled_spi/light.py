@@ -23,6 +23,7 @@ CHIPSETS = [
     "APA102",
     "SK9822",
     "DOTSTAR",
+    "HD108",
 ]
 
 CONFIG_SCHEMA = cv.All(

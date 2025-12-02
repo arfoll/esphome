@@ -72,6 +72,10 @@ class FastLEDLightOutput : public light::AddressableLight {
         static SK9822Controller<DATA_PIN, CLOCK_PIN, RGB_ORDER, SPI_DATA_RATE> controller;
         return add_leds(&controller, num_leds);
       }
+      case HD108: {
+        static HD108Controller<DATA_PIN, CLOCK_PIN, RGB_ORDER, SPI_DATA_RATE> controller;
+        return add_leds(&controller, num_leds);
+      }
     }
   }
 
@@ -104,6 +108,10 @@ class FastLEDLightOutput : public light::AddressableLight {
       }
       case SK9822: {
         static SK9822Controller<DATA_PIN, CLOCK_PIN> controller;
+        return add_leds(&controller, num_leds);
+      }
+      case HD108: {
+        static HD108Controller<DATA_PIN, CLOCK_PIN> controller;
         return add_leds(&controller, num_leds);
       }
     }
@@ -139,6 +147,10 @@ class FastLEDLightOutput : public light::AddressableLight {
       }
       case SK9822: {
         static SK9822Controller<DATA_PIN, CLOCK_PIN, RGB_ORDER> controller;
+        return add_leds(&controller, num_leds);
+      }
+      case HD108: {
+        static HD108Controller<DATA_PIN, CLOCK_PIN, RGB_ORDER> controller;
         return add_leds(&controller, num_leds);
       }
     }
